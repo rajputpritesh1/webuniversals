@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Universals - Top Website Design Company in Bangalore</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        primary: '#1e40af', // Royal Blue
+                        secondary: '#0ea5e9', // Sky Blue
+                        accent: '#f59e0b', // Amber
+                        dark: '#0f172a',
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #1e40af, #0ea5e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e40af;
+            border-radius: 4px;
+        }
+        .blob {
+            position: absolute;
+            filter: blur(50px);
+            z-index: -1;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-600 antialiased overflow-x-hidden">
+
+    <div class="bg-dark text-white text-xs py-2 hidden lg:block">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span><i class="fa-solid fa-phone mr-2 text-secondary"></i>+91 90084 04587</span>
+                <span><i class="fa-solid fa-envelope mr-2 text-secondary"></i>info@webuniversals.co.in</span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-secondary transition"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-secondary transition"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="hover:text-secondary transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-secondary transition"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                        W
+                    </div>
+                    <span class="text-2xl font-bold text-slate-800 tracking-tight">Web<span class="text-primary">Universals</span></span>
+                </a>
+                
+                <div class="hidden lg:flex space-x-8 items-center">
+                    <a href="#home" class="text-slate-700 hover:text-primary font-medium transition">Home</a>
+                    <a href="#about" class="text-slate-700 hover:text-primary font-medium transition">About Us</a>
+                    <div class="relative group">
+                        <button class="text-slate-700 hover:text-primary font-medium transition flex items-center">
+                            Services <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-56 bg-white border border-slate-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top p-2">
+                            <a href="#services" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg">Website Design</a>
+                            <a href="#services" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg">Web Development</a>
+                            <a href="#services" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg">Digital Marketing</a>
+                            <a href="#services" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg">SEO Optimization</a>
+                            <a href="#services" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg">Logo Design</a>
+                        </div>
+                    </div>
+                    <a href="#pricing" class="text-slate-700 hover:text-primary font-medium transition">Pricing</a>
+                    <a href="#portfolio" class="text-slate-700 hover:text-primary font-medium transition">Portfolio</a>
+                    <a href="#contact" class="px-6 py-2.5 bg-primary text-white rounded-full font-semibold shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-0.5 transition duration-300">
+                        Get a Quote
+                    </a>
+                </div>
+
+                <button class="lg:hidden text-slate-700 text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50">
+        <div class="absolute right-0 top-0 w-1/2 h-full bg-indigo-50/50 clip-path-polygon hidden lg:block" style="clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 text-xs font-bold tracking-wider mb-6">
+                        🚀 #1 WEBSITE DESIGN COMPANY IN BANGALORE
+                    </span>
+                    <h1 class="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-6">
+                        Grow, Expand & <br>
+                        <span class="text-gradient">Succeed Digitally.</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
+                        We create meaningful websites that offer simplistic user experiences, achieve high rankings on search engines, and promote your brand to the widest audience.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="px-8 py-4 bg-primary text-white rounded-lg font-bold shadow-lg shadow-blue-500/30 hover:bg-blue-700 transition flex items-center justify-center">
+                            Start Project <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="tel:+919008404587""tel:+919008404587" class="px-8 py-4 bg-white text-slate-800 border border-slate-200 rounded-lg font-bold hover:border-primary hover:text-primary transition flex items-center justify-center">
+                            <i class="fa-solid fa-phone mr-2"></i> +91 90084 04587
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="relative z-10 bg-white rounded-2xl shadow-2xl p-2 transform rotate-2 hover:rotate-0 transition duration-500">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1630&q=80" alt="Dashboard" class="rounded-xl w-full">
+                    </div>
+                    <div class="absolute -bottom-10 -left-10 bg-white p-4 rounded-xl shadow-xl z-20 animate-bounce" style="animation-duration: 3s;">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500">Google Rating</p>
+                                <p class="font-bold text-slate-800">5.0/5.0 Stars</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="grid grid-cols-2 gap-4" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80""https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="rounded-2xl shadow-lg w-full h-64 object-cover transform translate-y-8">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="text-primary font-bold text-sm tracking-widest uppercase mb-2">About Web Universals</h2>
+                    <h3 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">A Premier Website Design Company in Bangalore</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Web Universals is renowned for delivering cutting-edge digital solutions. As the top website design company in Bangalore, we take pride in crafting visually stunning and user-friendly websites that captivate visitors and drive conversions.
+                    </p>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        Our talented team stays abreast of the latest design trends to ensure every website is modern, responsive, and tailored to meet unique client needs.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-indigo-50 rounded-lg flex items-center justify-center text-primary mr-4 flex-shrink-0">
+                                <i class="fa-solid fa-users-viewfinder"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Targeted Traffic</h4>
+                                <p class="text-sm text-slate-500 mt-1">Attract qualified leads via organic search & paid ads.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-indigo-50 rounded-lg flex items-center justify-center text-primary mr-4 flex-shrink-0">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Optimize Conversions</h4>
+                                <p class="text-sm text-slate-500 mt-1">CRO strategies to turn visitors into loyal customers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">What Makes Us Different</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">We strive for innovation even in the most common conventions.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-slate-800/50 backdrop-blur p-8 rounded-2xl border border-slate-700 hover:border-primary transition duration-300" data-aos="fade-up" data-aos-delay="0">
+                    <i class="fa-solid fa-lightbulb text-4xl text-yellow-400 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-3">Creative Design</h4>
+                    <p class="text-sm text-slate-400">Brand new and original creative ideas to bring your campaigns to life.</p>
+                </div>
+                <div class="bg-slate-800/50 backdrop-blur p-8 rounded-2xl border border-slate-700 hover:border-primary transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-code text-4xl text-cyan-400 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-3">Pixel Perfect Coding</h4>
+                    <p class="text-sm text-slate-400">Clean code that is never lost in translation, ensuring high performance.</p>
+                </div>
+                <div class="bg-slate-800/50 backdrop-blur p-8 rounded-2xl border border-slate-700 hover:border-primary transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-mobile-screen text-4xl text-pink-400 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-3">Retina Ready</h4>
+                    <p class="text-sm text-slate-400">Sharper images and content that moves freely across all screen resolutions.</p>
+                </div>
+                <div class="bg-slate-800/50 backdrop-blur p-8 rounded-2xl border border-slate-700 hover:border-primary transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-headset text-4xl text-green-400 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-3">Superb Support</h4>
+                    <p class="text-sm text-slate-400">5-Star assistance offered within 48 hours for any issue with your site.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-2">Our Services</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Fully Integrated Digital Solutions</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 text-2xl mb-6">
+                        <i class="fa-brands fa-wordpress"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">WordPress Website</h4>
+                    <p class="text-slate-600 mb-4 text-sm">Custom WordPress solutions that are easy to manage and scale with your business.</p>
+                    <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More &rarr;</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover transition-all duration-300">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 text-2xl mb-6">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">E-Commerce Website</h4>
+                    <p class="text-slate-600 mb-4 text-sm">Robust online stores with secure payment gateways and intuitive product management.</p>
+                    <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More &rarr;</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover transition-all duration-300">
+                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 text-2xl mb-6">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Website Development</h4>
+                    <p class="text-slate-600 mb-4 text-sm">Our new-fangled approach creates deep love for your website through clean code.</p>
+                    <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More &rarr;</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover transition-all duration-300">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-green-600 text-2xl mb-6">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">SEO Optimization</h4>
+                    <p class="text-slate-600 mb-4 text-sm">Intensive, full-service approach to SEM to get you on the first page of Google.</p>
+                    <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More &rarr;</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover transition-all duration-300">
+                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center text-red-600 text-2xl mb-6">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Pay Per Click</h4>
+                    <p class="text-slate-600 mb-4 text-sm">PPC Domination: Get Instant Results, Qualified Leads, Skip the Wait & Boost ROI.</p>
+                    <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More &rarr;</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover transition-all duration-300">
+                    <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center text-cyan-600 text-2xl mb-6">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Logo Design</h4>
+                    <p class="text-slate-600 mb-4 text-sm">Unique branding strategies including Logo, Poster, and Graphic designing.</p>
+                    <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Website Design Packages</h2>
+                <p class="mt-4 text-slate-500">Transparent pricing. No hidden fees.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="0">
+                    <h3 class="text-xl font-bold text-slate-800">Basic Plan</h3>
+                    <div class="my-4">
+                        <span class="text-3xl font-extrabold text-primary">₹ 7,999</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-sm text-slate-600 flex-grow">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Free Domain & Hosting (1 Yr)</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Design Upto 6 Pages</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Responsive Web Design</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Search Engine Submission</li>
+                    </ul>
+                    <a href="#contact" class="w-full block text-center py-2.5 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition">Select Plan</a>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold text-slate-800">Standard Plan</h3>
+                    <div class="my-4">
+                        <span class="text-3xl font-extrabold text-primary">₹ 12,999</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-sm text-slate-600 flex-grow">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Free Domain & Hosting (1 Yr)</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Upto 12 Pages</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Free Support To Make Changes</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Email Accounts & SEO</li>
+                    </ul>
+                    <a href="#contact" class="w-full block text-center py-2.5 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition">Select Plan</a>
+                </div>
+
+                <div class="border-2 border-primary bg-slate-50 rounded-2xl p-6 shadow-2xl relative transform scale-105 z-10 flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">BEST VALUE</div>
+                    <h3 class="text-xl font-bold text-slate-800">Power Plan</h3>
+                    <div class="my-4">
+                        <span class="text-3xl font-extrabold text-primary">₹ 16,999</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-sm text-slate-600 flex-grow">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> 15 Pages Responsive</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> CMS - Blog - Chat</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> SEO & SMM Linking</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Logo Design (3 Unique)</li>
+                    </ul>
+                    <a href="#contact" class="w-full block text-center py-2.5 rounded-lg bg-primary text-white font-bold hover:bg-blue-800 transition">Select Plan</a>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold text-slate-800">Ultimate Plan</h3>
+                    <div class="my-4">
+                        <span class="text-3xl font-extrabold text-primary">₹ 24,999</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-sm text-slate-600 flex-grow">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Custom Design & Theme</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Payment Gateway Integration</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Social Media Account Setup</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> 1 Month Special Promotion</li>
+                    </ul>
+                    <a href="#contact" class="w-full block text-center py-2.5 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition">Select Plan</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Clients Feedback</h2>
+                <p class="text-slate-500">What our happy clients say about us.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-slate-200 absolute top-4 left-4"></i>
+                    <p class="text-slate-600 italic mb-6 relative z-10 pt-4">"We love the service and the work of web universals such a wonderful experience with this company creative designer with best quality service... we wish to assign few more web projects to web universal in future too."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">I</div>
+                        <div>
+                            <h5 class="font-bold text-slate-900">Irshad Siddiqui</h5>
+                            <p class="text-xs text-slate-500">Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-slate-200 absolute top-4 left-4"></i>
+                    <p class="text-slate-600 italic mb-6 relative z-10 pt-4">"Web Universals (Mr Srinivas) has given good service for the website, logo, company profile etc which I have done with him and he is a good supportive person. I liked his way of handling the customers."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">P</div>
+                        <div>
+                            <h5 class="font-bold text-slate-900">Puttayya Ip</h5>
+                            <p class="text-xs text-slate-500">Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-slate-200 absolute top-4 left-4"></i>
+                    <p class="text-slate-600 italic mb-6 relative z-10 pt-4">"Web Universals has given good service for the logo. I liked his way of handling the customers because I used to disturb him everyday he has given good response, overall its a good experience."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">S</div>
+                        <div>
+                            <h5 class="font-bold text-slate-900">Susai S</h5>
+                            <p class="text-xs text-slate-500">Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 relative bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-primary to-indigo-900 rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-5/12 p-10 text-white flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                    <div>
+                        <h3 class="text-3xl font-bold mb-4 font-serif">Let's Talk Brilliance</h3>
+                        <p class="text-indigo-100 mb-8">Contacting Us is the First Step to Your Digital Success.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold">Location</h5>
+                                    <p class="text-sm text-indigo-100">22A, 1st Floor, 19th Main Road,<br>Rajajinagar 1st Block, Above N S Variyar Bakery, Bengaluru - 560010</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold">Email</h5>
+                                    <p class="text-sm text-indigo-100">info@webuniversals.co.in</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold">Phone</h5>
+                                    <p class="text-sm text-indigo-100">+91 90084 04587</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-primary transition"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-primary transition"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="md:w-7/12 p-10 bg-white">
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2">Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-2">Phone</label>
+                                <input type="tel" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" placeholder="Phone Number">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Select Service</label>
+                            <select class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition text-slate-600">
+                                <option>Website Design</option>
+                                <option>Mobile Application</option>
+                                <option>Social Media Marketing</option>
+                                <option>SEO</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" placeholder="Tell us about your requirements..."></textarea>
+                        </div>
+                        <button type="button" class="w-full py-4 bg-primary text-white font-bold rounded-lg shadow-lg hover:bg-indigo-800 transform hover:-translate-y-1 transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <span class="text-2xl font-bold text-white tracking-tight mb-6 block">Web<span class="text-primary">Universals</span></span>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Premier website design company in Bangalore, renowned for delivering cutting-edge digital solutions to clients across various industries.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-primary transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Services</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Portfolio</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-primary transition">Website Development</a></li>
+                        <li><a href="#" class="hover:text-primary transition">E-commerce Website</a></li>
+                        <li><a href="#" class="hover:text-primary transition">WordPress Website</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Logo Design</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Digital Marketing</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-3 text-primary"></i>
+                            <span>22A, 1st Floor, 19th Main Road, Rajajinagar 1st Block, Bengaluru - 560010</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone mr-3 text-primary"></i>
+                            <span>+91 90084 04587</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-envelope mr-3 text-primary"></i>
+                            <span>info@webuniversals.co.in</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2026 Web Universals. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Terms & Conditions</a>
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Refunds</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919008404587""https://wa.me/919008404587" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition z-50 animate-bounce">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.style.background = "rgba(255, 255, 255, 0.98)";
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
