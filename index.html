@@ -3,35 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Universals - Top Website Design Company in Bangalore</title>
+    <title>Café Bondi | Coffee. Sunshine. Good Times.</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        serif: ['"Playfair Display"', 'serif'],
-                    },
                     colors: {
-                        primary: '#1e40af', // Royal Blue
-                        secondary: '#0ea5e9', // Sky Blue
-                        accent: '#f59e0b', // Amber
-                        dark: '#0f172a',
+                        sand: '#f5e9da',
+                        ocean: '#1e3a5f',
+                        accent: '#ff7a00',
                     },
-                    backgroundImage: {
-                        'hero-pattern': "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')",
-                    }
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Poppins', 'sans-serif'],
+                    },
                 }
             }
         }
@@ -39,567 +34,320 @@
 
     <style>
         .glass {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
-        .text-gradient {
-            background: linear-gradient(to right, #1e40af, #0ea5e9);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
         }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        .menu-tab.active {
+            border-bottom: 2px solid #ff7a00;
+            color: #ff7a00;
         }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1e40af;
-            border-radius: 4px;
-        }
-        .blob {
-            position: absolute;
-            filter: blur(50px);
-            z-index: -1;
-            opacity: 0.4;
-        }
+        .text-kern { letter-spacing: 0.1em; }
     </style>
 </head>
-<body class="font-sans text-slate-600 antialiased overflow-x-hidden">
+<body class="bg-white font-body text-ocean overflow-x-hidden">
 
-    <div class="bg-dark text-white text-xs py-2 hidden lg:block">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <div class="flex space-x-6">
-                <span><i class="fa-solid fa-phone mr-2 text-secondary"></i>+91 90084 04587</span>
-                <span><i class="fa-solid fa-envelope mr-2 text-secondary"></i>info@webuniversals.co.in</span>
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-heading font-bold tracking-tighter text-ocean">BONDI<span class="text-accent">.</span></a>
+            
+            <div class="hidden md:flex space-x-8 items-center font-medium uppercase text-xs tracking-widest">
+                <a href="#about" class="hover:text-accent transition">About</a>
+                <a href="#menu" class="hover:text-accent transition">Menu</a>
+                <a href="#events" class="hover:text-accent transition">Events</a>
+                <a href="#contact" class="hover:text-accent transition">Contact</a>
+                <a href="https://www.ubereats.com/au/store/cafe-bondi/HxEaWCUjR0yJnFGtVob90w" target="_blank" class="bg-ocean text-white px-6 py-3 rounded-full hover:bg-accent transition transform hover:scale-105">Order Now</a>
             </div>
-            <div class="flex space-x-4">
-                <a href="#" class="hover:text-secondary transition"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-secondary transition"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#" class="hover:text-secondary transition"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="hover:text-secondary transition"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-        </div>
-    </div>
 
-    <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <a href="#" class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                        W
-                    </div>
-                    <span class="text-2xl font-bold text-slate-800 tracking-tight">Web<span class="text-primary">Universals</span></span>
-                </a>
-                
-                <div class="hidden lg:flex space-x-8 items-center">
-                    <a href="#home" class="text-slate-700 hover:text-primary font-medium transition">Home</a>
-                    <a href="#about" class="text-slate-700 hover:text-primary font-medium transition">About Us</a>
-                    <div class="relative group">
-                        <button class="text-slate-700 hover:text-primary font-medium transition flex items-center">
-                            Services <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
-                        </button>
-                        <div class="absolute left-0 mt-2 w-56 bg-white border border-slate-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top p-2">
-                            <a href="#services" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg">Website Design</a>
-                            <a href="#services" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg">Web Development</a>
-                            <a href="#services" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg">Digital Marketing</a>
-                            <a href="#services" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg">SEO Optimization</a>
-                            <a href="#services" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg">Logo Design</a>
-                        </div>
-                    </div>
-                    <a href="#pricing" class="text-slate-700 hover:text-primary font-medium transition">Pricing</a>
-                    <a href="#portfolio" class="text-slate-700 hover:text-primary font-medium transition">Portfolio</a>
-                    <a href="#contact" class="px-6 py-2.5 bg-primary text-white rounded-full font-semibold shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-0.5 transition duration-300">
-                        Get a Quote
-                    </a>
-                </div>
-
-                <button class="lg:hidden text-slate-700 text-2xl">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
+            <button class="md:hidden text-ocean" id="menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
         </div>
     </nav>
 
-    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50">
-        <div class="absolute right-0 top-0 w-1/2 h-full bg-indigo-50/50 clip-path-polygon hidden lg:block" style="clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);"></div>
-        
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right" data-aos-duration="1000">
-                    <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 text-xs font-bold tracking-wider mb-6">
-                        🚀 #1 WEBSITE DESIGN COMPANY IN BANGALORE
-                    </span>
-                    <h1 class="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-6">
-                        Grow, Expand & <br>
-                        <span class="text-gradient">Succeed Digitally.</span>
-                    </h1>
-                    <p class="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
-                        We create meaningful websites that offer simplistic user experiences, achieve high rankings on search engines, and promote your brand to the widest audience.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#contact" class="px-8 py-4 bg-primary text-white rounded-lg font-bold shadow-lg shadow-blue-500/30 hover:bg-blue-700 transition flex items-center justify-center">
-                            Start Project <i class="fa-solid fa-arrow-right ml-2"></i>
-                        </a>
-                        <a href="tel:+919008404587""tel:+919008404587" class="px-8 py-4 bg-white text-slate-800 border border-slate-200 rounded-lg font-bold hover:border-primary hover:text-primary transition flex items-center justify-center">
-                            <i class="fa-solid fa-phone mr-2"></i> +91 90084 04587
-                        </a>
-                    </div>
+    <div id="mobile-menu" class="fixed inset-0 bg-sand z-[60] flex flex-col items-center justify-center space-y-8 text-2xl font-heading opacity-0 pointer-events-none transition-all duration-500">
+        <button id="close-menu" class="absolute top-8 right-8 text-ocean">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#menu" class="mobile-link">Menu</a>
+        <a href="#events" class="mobile-link">Events</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="https://www.ubereats.com/au/store/cafe-bondi/HxEaWCUjR0yJnFGtVob90w" class="bg-accent text-white px-8 py-4 rounded-full">Order Online</a>
+    </div>
+
+    <section class="h-screen hero-gradient flex items-center justify-center text-center relative">
+        <div class="container px-6" data-aos="zoom-out" data-aos-duration="1500">
+            <h4 class="text-white uppercase tracking-[0.4em] mb-4 text-sm md:text-base">EST. 2014 • Bondi Beach</h4>
+            <h1 class="text-5xl md:text-8xl font-heading text-white mb-8 leading-tight">Coffee. Sunshine.<br><span class="italic font-light text-sand">Good Times.</span></h1>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                <a href="#menu" class="w-full md:w-auto px-10 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-ocean transition-all duration-300">Explore Menu</a>
+                <a href="https://www.ubereats.com/au/store/cafe-bondi/HxEaWCUjR0yJnFGtVob90w" target="_blank" class="w-full md:w-auto px-10 py-4 bg-accent text-white font-semibold rounded-full hover:shadow-2xl hover:bg-orange-600 transition-all duration-300">Order Takeaway</a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2 relative" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800" alt="Cafe Interior" class="rounded-2xl shadow-2xl relative z-10">
+                    <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-sand rounded-2xl -z-10"></div>
                 </div>
-                
-                <div class="relative" data-aos="fade-left" data-aos-duration="1000">
-                    <div class="relative z-10 bg-white rounded-2xl shadow-2xl p-2 transform rotate-2 hover:rotate-0 transition duration-500">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1630&q=80" alt="Dashboard" class="rounded-xl w-full">
-                    </div>
-                    <div class="absolute -bottom-10 -left-10 bg-white p-4 rounded-xl shadow-xl z-20 animate-bounce" style="animation-duration: 3s;">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600">
-                                <i class="fa-solid fa-check"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs text-slate-500">Google Rating</p>
-                                <p class="font-bold text-slate-800">5.0/5.0 Stars</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="w-full lg:w-1/2" data-aos="fade-left">
+                    <h5 class="text-accent font-semibold tracking-widest uppercase mb-4">Our Story</h5>
+                    <h2 class="text-4xl md:text-5xl font-heading mb-6 leading-tight">A Coastal Sanctuary for Foodies</h2>
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">Located just steps away from the iconic Bondi shoreline, Café Bondi is more than just a coffee shop. We are a community hub where sustainably sourced ingredients meet artisanal craftsmanship. Whether you're coming in for your post-surf acai or a sunset dinner, we bring the best of the beach to your table.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <span class="w-6 h-6 bg-sand flex items-center justify-center rounded-full text-accent">✓</span>
+                            <span>Locally roasted specialty coffee</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-6 h-6 bg-sand flex items-center justify-center rounded-full text-accent">✓</span>
+                            <span>Fresh, organic seasonal produce</span>
+                        </li>
+                    </ul>
+                    <a href="#menu" class="inline-block border-b-2 border-accent pb-1 font-semibold hover:text-accent transition">Discover Our Process &rarr;</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="grid grid-cols-2 gap-4" data-aos="fade-up">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80""https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="rounded-2xl shadow-lg w-full h-64 object-cover transform translate-y-8">
-                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="rounded-2xl shadow-lg w-full h-64 object-cover">
-                </div>
-                <div data-aos="fade-up" data-aos-delay="200">
-                    <h2 class="text-primary font-bold text-sm tracking-widest uppercase mb-2">About Web Universals</h2>
-                    <h3 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">A Premier Website Design Company in Bangalore</h3>
-                    <p class="text-slate-600 mb-6 leading-relaxed">
-                        Web Universals is renowned for delivering cutting-edge digital solutions. As the top website design company in Bangalore, we take pride in crafting visually stunning and user-friendly websites that captivate visitors and drive conversions.
-                    </p>
-                    <p class="text-slate-600 mb-8 leading-relaxed">
-                        Our talented team stays abreast of the latest design trends to ensure every website is modern, responsive, and tailored to meet unique client needs.
-                    </p>
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 bg-indigo-50 rounded-lg flex items-center justify-center text-primary mr-4 flex-shrink-0">
-                                <i class="fa-solid fa-users-viewfinder"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-slate-900">Targeted Traffic</h4>
-                                <p class="text-sm text-slate-500 mt-1">Attract qualified leads via organic search & paid ads.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 bg-indigo-50 rounded-lg flex items-center justify-center text-primary mr-4 flex-shrink-0">
-                                <i class="fa-solid fa-chart-line"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-slate-900">Optimize Conversions</h4>
-                                <p class="text-sm text-slate-500 mt-1">CRO strategies to turn visitors into loyal customers.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">What Makes Us Different</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">We strive for innovation even in the most common conventions.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-slate-800/50 backdrop-blur p-8 rounded-2xl border border-slate-700 hover:border-primary transition duration-300" data-aos="fade-up" data-aos-delay="0">
-                    <i class="fa-solid fa-lightbulb text-4xl text-yellow-400 mb-6"></i>
-                    <h4 class="text-xl font-bold mb-3">Creative Design</h4>
-                    <p class="text-sm text-slate-400">Brand new and original creative ideas to bring your campaigns to life.</p>
-                </div>
-                <div class="bg-slate-800/50 backdrop-blur p-8 rounded-2xl border border-slate-700 hover:border-primary transition duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fa-solid fa-code text-4xl text-cyan-400 mb-6"></i>
-                    <h4 class="text-xl font-bold mb-3">Pixel Perfect Coding</h4>
-                    <p class="text-sm text-slate-400">Clean code that is never lost in translation, ensuring high performance.</p>
-                </div>
-                <div class="bg-slate-800/50 backdrop-blur p-8 rounded-2xl border border-slate-700 hover:border-primary transition duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fa-solid fa-mobile-screen text-4xl text-pink-400 mb-6"></i>
-                    <h4 class="text-xl font-bold mb-3">Retina Ready</h4>
-                    <p class="text-sm text-slate-400">Sharper images and content that moves freely across all screen resolutions.</p>
-                </div>
-                <div class="bg-slate-800/50 backdrop-blur p-8 rounded-2xl border border-slate-700 hover:border-primary transition duration-300" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fa-solid fa-headset text-4xl text-green-400 mb-6"></i>
-                    <h4 class="text-xl font-bold mb-3">Superb Support</h4>
-                    <p class="text-sm text-slate-400">5-Star assistance offered within 48 hours for any issue with your site.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="py-20 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="menu" class="py-24 bg-sand/30">
+        <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-2">Our Services</h2>
-                <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Fully Integrated Digital Solutions</h3>
+                <h2 class="text-4xl md:text-6xl font-heading mb-4">Seasonal Menu</h2>
+                <div class="flex justify-center flex-wrap gap-4 mt-8" id="menu-filters">
+                    <button class="menu-tab active uppercase tracking-widest text-sm px-6 py-2" data-filter="breakfast">Breakfast</button>
+                    <button class="menu-tab uppercase tracking-widest text-sm px-6 py-2" data-filter="bowls">Bowls</button>
+                    <button class="menu-tab uppercase tracking-widest text-sm px-6 py-2" data-filter="burgers">Burgers</button>
+                    <button class="menu-tab uppercase tracking-widest text-sm px-6 py-2" data-filter="drinks">Drinks</button>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover transition-all duration-300">
-                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 text-2xl mb-6">
-                        <i class="fa-brands fa-wordpress"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-3">WordPress Website</h4>
-                    <p class="text-slate-600 mb-4 text-sm">Custom WordPress solutions that are easy to manage and scale with your business.</p>
-                    <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More &rarr;</a>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10" id="menu-container">
                 </div>
+        </div>
+    </section>
 
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover transition-all duration-300">
-                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 text-2xl mb-6">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-3">E-Commerce Website</h4>
-                    <p class="text-slate-600 mb-4 text-sm">Robust online stores with secure payment gateways and intuitive product management.</p>
-                    <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More &rarr;</a>
+    <section class="py-20 bg-ocean text-white relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-heading mb-6" data-aos="fade-up">Can't make it to the beach?</h2>
+            <p class="text-xl mb-10 text-blue-100" data-aos="fade-up" data-aos-delay="100">Get your Bondi favorites delivered straight to your door.</p>
+            <a href="https://www.ubereats.com/au/store/cafe-bondi/HxEaWCUjR0yJnFGtVob90w" target="_blank" class="inline-flex items-center gap-4 bg-white text-ocean px-12 py-5 rounded-full font-bold text-lg hover:bg-accent hover:text-white transition-all transform hover:-translate-y-1 shadow-xl">
+                Order via Uber Eats
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </a>
+        </div>
+        <div class="absolute top-0 right-0 opacity-10 -mr-20 -mt-20">
+            <svg width="400" height="400" viewBox="0 0 200 200" fill="white"><path d="M40,-66.2C50.7,-58.5,57.5,-45.1,64.8,-32.1C72.1,-19.1,79.9,-6.4,79.1,6.1C78.4,18.6,69.1,31,59.3,41.9C49.5,52.8,39.2,62.3,27,67.6C14.8,72.8,0.7,73.8,-14.1,71.2C-28.9,68.7,-44.4,62.5,-55.4,51.8C-66.4,41.1,-72.9,25.9,-75.4,10.2C-77.9,-5.5,-76.4,-21.8,-68.8,-35.1C-61.2,-48.5,-47.5,-58.9,-34.2,-65C-20.9,-71.1,-8.1,-73,2.9,-77.4C13.9,-81.8,29.3,-73.9,40,-66.2Z" transform="translate(100 100)" /></svg>
+        </div>
+    </section>
+
+    <section class="py-24">
+        <div class="container mx-auto px-6 mb-12 flex justify-between items-end">
+            <div>
+                <h5 class="text-accent font-semibold tracking-widest uppercase mb-4">Gallery</h5>
+                <h2 class="text-4xl font-heading">#BondiVibes</h2>
+            </div>
+            <a href="#" class="hidden md:block text-ocean font-medium border-b border-ocean">Follow @cafebondi</a>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
+            <div class="overflow-hidden rounded-xl group" data-aos="fade-up">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=600" class="h-80 w-full object-cover group-hover:scale-110 transition duration-700 cursor-pointer" alt="Gallery">
+            </div>
+            <div class="overflow-hidden rounded-xl group" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&q=80&w=600" class="h-80 w-full object-cover group-hover:scale-110 transition duration-700 cursor-pointer" alt="Gallery">
+            </div>
+            <div class="overflow-hidden rounded-xl group" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?auto=format&fit=crop&q=80&w=600" class="h-80 w-full object-cover group-hover:scale-110 transition duration-700 cursor-pointer" alt="Gallery">
+            </div>
+            <div class="overflow-hidden rounded-xl group" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1517705008128-361805f42e8a?auto=format&fit=crop&q=80&w=600" class="h-80 w-full object-cover group-hover:scale-110 transition duration-700 cursor-pointer" alt="Gallery">
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="py-24 bg-sand/20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-heading mb-16">What's On</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition" data-aos="fade-up">
+                    <div class="text-accent font-bold mb-4 uppercase text-xs tracking-widest">Every Friday</div>
+                    <h3 class="text-2xl font-heading mb-4 text-ocean">Sunset Acoustic</h3>
+                    <p class="text-gray-500 mb-6">Enjoy live local artists and $10 Margaritas from 4 PM till late.</p>
                 </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover transition-all duration-300">
-                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 text-2xl mb-6">
-                        <i class="fa-solid fa-laptop-code"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-3">Website Development</h4>
-                    <p class="text-slate-600 mb-4 text-sm">Our new-fangled approach creates deep love for your website through clean code.</p>
-                    <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More &rarr;</a>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-2 border-accent hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-accent font-bold mb-4 uppercase text-xs tracking-widest">Special Event</div>
+                    <h3 class="text-2xl font-heading mb-4 text-ocean">Bottomless Brunch</h3>
+                    <p class="text-gray-500 mb-6">2 hours of Mimosas and your favorite brunch picks every Sunday.</p>
                 </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover transition-all duration-300">
-                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-green-600 text-2xl mb-6">
-                        <i class="fa-solid fa-magnifying-glass-chart"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-3">SEO Optimization</h4>
-                    <p class="text-slate-600 mb-4 text-sm">Intensive, full-service approach to SEM to get you on the first page of Google.</p>
-                    <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More &rarr;</a>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover transition-all duration-300">
-                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center text-red-600 text-2xl mb-6">
-                        <i class="fa-solid fa-bullhorn"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-3">Pay Per Click</h4>
-                    <p class="text-slate-600 mb-4 text-sm">PPC Domination: Get Instant Results, Qualified Leads, Skip the Wait & Boost ROI.</p>
-                    <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More &rarr;</a>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover transition-all duration-300">
-                    <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center text-cyan-600 text-2xl mb-6">
-                        <i class="fa-solid fa-pen-nib"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-3">Logo Design</h4>
-                    <p class="text-slate-600 mb-4 text-sm">Unique branding strategies including Logo, Poster, and Graphic designing.</p>
-                    <a href="#" class="text-primary font-semibold text-sm hover:underline">Read More &rarr;</a>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-accent font-bold mb-4 uppercase text-xs tracking-widest">Workshops</div>
+                    <h3 class="text-2xl font-heading mb-4 text-ocean">Latte Art Class</h3>
+                    <p class="text-gray-500 mb-6">Master the perfect pour with our head barista. Limited spots.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Website Design Packages</h2>
-                <p class="mt-4 text-slate-500">Transparent pricing. No hidden fees.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <div class="border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="0">
-                    <h3 class="text-xl font-bold text-slate-800">Basic Plan</h3>
-                    <div class="my-4">
-                        <span class="text-3xl font-extrabold text-primary">₹ 7,999</span>
-                    </div>
-                    <ul class="space-y-3 mb-8 text-sm text-slate-600 flex-grow">
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Free Domain & Hosting (1 Yr)</li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Design Upto 6 Pages</li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Responsive Web Design</li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Search Engine Submission</li>
-                    </ul>
-                    <a href="#contact" class="w-full block text-center py-2.5 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition">Select Plan</a>
-                </div>
-
-                <div class="border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-xl font-bold text-slate-800">Standard Plan</h3>
-                    <div class="my-4">
-                        <span class="text-3xl font-extrabold text-primary">₹ 12,999</span>
-                    </div>
-                    <ul class="space-y-3 mb-8 text-sm text-slate-600 flex-grow">
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Free Domain & Hosting (1 Yr)</li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Upto 12 Pages</li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Free Support To Make Changes</li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Email Accounts & SEO</li>
-                    </ul>
-                    <a href="#contact" class="w-full block text-center py-2.5 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition">Select Plan</a>
-                </div>
-
-                <div class="border-2 border-primary bg-slate-50 rounded-2xl p-6 shadow-2xl relative transform scale-105 z-10 flex flex-col" data-aos="fade-up" data-aos-delay="200">
-                    <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">BEST VALUE</div>
-                    <h3 class="text-xl font-bold text-slate-800">Power Plan</h3>
-                    <div class="my-4">
-                        <span class="text-3xl font-extrabold text-primary">₹ 16,999</span>
-                    </div>
-                    <ul class="space-y-3 mb-8 text-sm text-slate-600 flex-grow">
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> 15 Pages Responsive</li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> CMS - Blog - Chat</li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> SEO & SMM Linking</li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Logo Design (3 Unique)</li>
-                    </ul>
-                    <a href="#contact" class="w-full block text-center py-2.5 rounded-lg bg-primary text-white font-bold hover:bg-blue-800 transition">Select Plan</a>
-                </div>
-
-                <div class="border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-xl font-bold text-slate-800">Ultimate Plan</h3>
-                    <div class="my-4">
-                        <span class="text-3xl font-extrabold text-primary">₹ 24,999</span>
-                    </div>
-                    <ul class="space-y-3 mb-8 text-sm text-slate-600 flex-grow">
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Custom Design & Theme</li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Payment Gateway Integration</li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Social Media Account Setup</li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> 1 Month Special Promotion</li>
-                    </ul>
-                    <a href="#contact" class="w-full block text-center py-2.5 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition">Select Plan</a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-slate-100">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900">Clients Feedback</h2>
-                <p class="text-slate-500">What our happy clients say about us.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-lg relative">
-                    <i class="fa-solid fa-quote-left text-4xl text-slate-200 absolute top-4 left-4"></i>
-                    <p class="text-slate-600 italic mb-6 relative z-10 pt-4">"We love the service and the work of web universals such a wonderful experience with this company creative designer with best quality service... we wish to assign few more web projects to web universal in future too."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">I</div>
-                        <div>
-                            <h5 class="font-bold text-slate-900">Irshad Siddiqui</h5>
-                            <p class="text-xs text-slate-500">Business Owner</p>
+    <section id="contact" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-heading mb-8">Visit Us</h2>
+                    <div class="space-y-6 text-lg">
+                        <div class="flex items-start gap-4">
+                            <span class="font-bold text-accent">Loc:</span>
+                            <p>123 Bondi Rd, Bondi Beach<br>NSW 2026, Australia</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="font-bold text-accent">Hrs:</span>
+                            <p>Mon - Sun: 7:00 AM - 9:00 PM</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="font-bold text-accent">Ph:</span>
+                            <p>+61 (02) 9876 5432</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-lg relative">
-                    <i class="fa-solid fa-quote-left text-4xl text-slate-200 absolute top-4 left-4"></i>
-                    <p class="text-slate-600 italic mb-6 relative z-10 pt-4">"Web Universals (Mr Srinivas) has given good service for the website, logo, company profile etc which I have done with him and he is a good supportive person. I liked his way of handling the customers."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">P</div>
-                        <div>
-                            <h5 class="font-bold text-slate-900">Puttayya Ip</h5>
-                            <p class="text-xs text-slate-500">Entrepreneur</p>
-                        </div>
+                    <div class="mt-10 flex gap-6">
+                        <a href="#" class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-ocean hover:text-white transition">IG</a>
+                        <a href="#" class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-ocean hover:text-white transition">FB</a>
+                        <a href="#" class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-ocean hover:text-white transition">TW</a>
                     </div>
                 </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-lg relative">
-                    <i class="fa-solid fa-quote-left text-4xl text-slate-200 absolute top-4 left-4"></i>
-                    <p class="text-slate-600 italic mb-6 relative z-10 pt-4">"Web Universals has given good service for the logo. I liked his way of handling the customers because I used to disturb him everyday he has given good response, overall its a good experience."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">S</div>
-                        <div>
-                            <h5 class="font-bold text-slate-900">Susai S</h5>
-                            <p class="text-xs text-slate-500">Client</p>
-                        </div>
-                    </div>
+                <div class="h-[450px] rounded-2xl overflow-hidden shadow-2xl" data-aos="fade-left">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13248.90562858102!2d151.2619077921356!3d-33.89061099859296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ad9cd35e69e5%3A0x5017d681632f0c0!2sBondi%20Beach%20NSW%202026%2C%20Australia!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-20 relative bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="bg-gradient-to-r from-primary to-indigo-900 rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
-                <div class="md:w-5/12 p-10 text-white flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl -mr-10 -mt-10"></div>
-                    <div>
-                        <h3 class="text-3xl font-bold mb-4 font-serif">Let's Talk Brilliance</h3>
-                        <p class="text-indigo-100 mb-8">Contacting Us is the First Step to Your Digital Success.</p>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div>
-                                    <h5 class="font-bold">Location</h5>
-                                    <p class="text-sm text-indigo-100">22A, 1st Floor, 19th Main Road,<br>Rajajinagar 1st Block, Above N S Variyar Bakery, Bengaluru - 560010</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <h5 class="font-bold">Email</h5>
-                                    <p class="text-sm text-indigo-100">info@webuniversals.co.in</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div>
-                                    <h5 class="font-bold">Phone</h5>
-                                    <p class="text-sm text-indigo-100">+91 90084 04587</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-12 flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-primary transition"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-primary transition"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-
-                <div class="md:w-7/12 p-10 bg-white">
-                    <form>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-2">Name</label>
-                                <input type="text" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" placeholder="Your Name">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-2">Phone</label>
-                                <input type="tel" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" placeholder="Phone Number">
-                            </div>
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-sm font-medium text-slate-700 mb-2">Select Service</label>
-                            <select class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition text-slate-600">
-                                <option>Website Design</option>
-                                <option>Mobile Application</option>
-                                <option>Social Media Marketing</option>
-                                <option>SEO</option>
-                            </select>
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-sm font-medium text-slate-700 mb-2">Message</label>
-                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" placeholder="Tell us about your requirements..."></textarea>
-                        </div>
-                        <button type="button" class="w-full py-4 bg-primary text-white font-bold rounded-lg shadow-lg hover:bg-indigo-800 transform hover:-translate-y-1 transition duration-300">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-dark text-slate-400 py-16 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
-                <div>
-                    <span class="text-2xl font-bold text-white tracking-tight mb-6 block">Web<span class="text-primary">Universals</span></span>
-                    <p class="text-sm leading-relaxed mb-6">
-                        Premier website design company in Bangalore, renowned for delivering cutting-edge digital solutions to clients across various industries.
-                    </p>
-                    <div class="flex space-x-3">
-                        <a href="#" class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-white font-bold mb-6">Quick Links</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="#" class="hover:text-primary transition">About Us</a></li>
-                        <li><a href="#" class="hover:text-primary transition">Services</a></li>
-                        <li><a href="#" class="hover:text-primary transition">Portfolio</a></li>
-                        <li><a href="#" class="hover:text-primary transition">Contact Us</a></li>
-                        <li><a href="#" class="hover:text-primary transition">Blogs</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-white font-bold mb-6">Services</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="#" class="hover:text-primary transition">Website Development</a></li>
-                        <li><a href="#" class="hover:text-primary transition">E-commerce Website</a></li>
-                        <li><a href="#" class="hover:text-primary transition">WordPress Website</a></li>
-                        <li><a href="#" class="hover:text-primary transition">Logo Design</a></li>
-                        <li><a href="#" class="hover:text-primary transition">Digital Marketing</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-white font-bold mb-6">Contact Us</h4>
-                    <ul class="space-y-4 text-sm">
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-location-dot mt-1 mr-3 text-primary"></i>
-                            <span>22A, 1st Floor, 19th Main Road, Rajajinagar 1st Block, Bengaluru - 560010</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fa-solid fa-phone mr-3 text-primary"></i>
-                            <span>+91 90084 04587</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fa-solid fa-envelope mr-3 text-primary"></i>
-                            <span>info@webuniversals.co.in</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-sm">
-                <p>&copy; 2026 Web Universals. All Rights Reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-white">Terms & Conditions</a>
-                    <a href="#" class="hover:text-white">Privacy Policy</a>
-                    <a href="#" class="hover:text-white">Refunds</a>
-                </div>
+    <footer class="bg-ocean text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-heading mb-4">BONDI<span class="text-accent">.</span></h2>
+            <p class="text-blue-200/50 text-sm tracking-widest uppercase mb-12">&copy; 2026 Café Bondi. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-8 text-sm font-medium uppercase tracking-widest opacity-80">
+                <a href="#" class="hover:text-accent">Privacy</a>
+                <a href="#" class="hover:text-accent">Terms</a>
+                <a href="#" class="hover:text-accent">Careers</a>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/919008404587""https://wa.me/919008404587" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition z-50 animate-bounce">
-        <i class="fa-brands fa-whatsapp text-2xl"></i>
+    <a href="https://www.ubereats.com/au/store/cafe-bondi/HxEaWCUjR0yJnFGtVob90w" target="_blank" class="fixed bottom-8 right-8 z-[100] bg-accent text-white p-4 rounded-full shadow-2xl hover:scale-110 transition md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
     </a>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
     <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 50
-        });
+        // Init AOS
+        AOS.init({ duration: 1000, once: true });
 
         // Navbar Scroll Effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
             if (window.scrollY > 50) {
-                navbar.classList.add('shadow-md');
-                navbar.style.background = "rgba(255, 255, 255, 0.98)";
+                nav.classList.add('glass', 'py-4');
+                nav.classList.remove('py-6');
             } else {
-                navbar.classList.remove('shadow-md');
+                nav.classList.remove('glass', 'py-4');
+                nav.classList.add('py-6');
             }
         });
+
+        // Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+            gsap.from(".mobile-link", {y: 30, opacity:0, stagger: 0.1, duration: 0.5});
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('opacity-0', 'pointer-events-none'));
+        });
+
+        // Menu Data
+        const menuData = [
+            { id: 1, category: 'breakfast', name: 'Bondi Brekkie', price: '$24', desc: 'Poached eggs, sourdough, avocado, and halloumi.', img: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&q=80&w=400' },
+            { id: 2, category: 'bowls', name: 'Sunrise Acai', price: '$18', desc: 'Organic acai, house-made granola, seasonal berries.', img: 'https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&q=80&w=400' },
+            { id: 3, category: 'burgers', name: 'Wagyu Beach Burger', price: '$26', desc: 'Premium wagyu, cheddar, caramelized onions, fries.', img: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=400' },
+            { id: 4, category: 'drinks', name: 'Bondi Cold Brew', price: '$8', desc: '12-hour slow drip single origin coffee.', img: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=400' },
+            { id: 5, category: 'bowls', name: 'Poke Paradise', price: '$22', desc: 'Fresh tuna, edamame, seaweed, brown rice.', img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400' },
+            { id: 6, category: 'breakfast', name: 'Ricotta Hotcakes', price: '$20', desc: 'Honeycomb butter, banana, maple syrup.', img: 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&q=80&w=400' }
+        ];
+
+        // Render Menu
+        const menuContainer = document.getElementById('menu-container');
+        const filterButtons = document.querySelectorAll('.menu-tab');
+
+        function renderMenu(filter = 'breakfast') {
+            menuContainer.innerHTML = '';
+            const filteredItems = menuData.filter(item => item.category === filter);
+            
+            filteredItems.forEach((item, index) => {
+                const card = `
+                    <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500" data-aos="fade-up" data-aos-delay="${index * 100}">
+                        <div class="h-64 overflow-hidden">
+                            <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xl font-heading font-bold">${item.name}</h3>
+                                <span class="text-accent font-bold">${item.price}</span>
+                            </div>
+                            <p class="text-gray-500 text-sm leading-relaxed">${item.desc}</p>
+                        </div>
+                    </div>
+                `;
+                menuContainer.innerHTML += card;
+            });
+        }
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderMenu(btn.dataset.filter);
+            });
+        });
+
+        // Initial Load
+        renderMenu('breakfast');
+
     </script>
 </body>
 </html>
